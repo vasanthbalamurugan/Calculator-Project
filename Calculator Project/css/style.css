@@ -1,174 +1,168 @@
-/* CalcSwitch - Calculator website with dark and light  mode */
-
+/* CalcSwitch - Calculator website with dark and light mode */
 
 * {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
+  margin: 0%; /* Reset margin for all elements */
+  padding: 0%; /* Reset padding for all elements */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  font-family: "Courier New", Courier, monospace; /* Set default font */
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #edf1f4;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  min-height: 100vh; /* Full viewport height */
+  background: #edf1f4; /* Light background color */
 }
 
-#heading{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: 5px 0;
-  color: #105e9d;
-  font-size: 18px;
+#heading {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; /* Set font for heading */
+  margin: 5px 0; /* Margin for spacing */
+  color: #105e9d; /* Heading color */
+  font-size: 18px; /* Font size for heading */
 }
 
 .dark-mode {
-  background: #1a1a1a;
+  background: #1a1a1a; /* Dark background for dark mode */
 }
 
 .calculator {
-  position: relative;
-  width: 340px;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffb;
+  position: relative; /* Position relative for child elements */
+  width: 340px; /* Fixed width for calculator */
+  padding: 20px; /* Padding inside calculator */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffb; /* Shadow effect */
 }
 
 .dark-mode .calculator {
-  background: #33393e;
+  background: #33393e; /* Dark background for calculator in dark mode */
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1),
-    -15px -15px 20px rgba(255, 255, 255, 0.1);
+    -15px -15px 20px rgba(255, 255, 255, 0.1); /* Shadow effect for dark mode */
 }
 
 .calculator .buttons {
-  position: relative;
-  display: grid;
+  position: relative; /* Position relative for button layout */
+  display: grid; /* Use grid layout for buttons */
 }
 
 .calculator .buttons #value {
-  position: relative;
-  grid-column: span 4;
-  user-select: none;
-  overflow: none;
-  width: 100%;
-  text-align: end;
-  color: #5166d6;
-  height: 100px;
-  line-height: 100px;
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px #fff;
-  border-radius: 10px;
-  margin-bottom: 12px;
-  padding: 0 20px;
-  font-size: 2em;
-  font-weight: 500;
+  position: relative; /* Position relative for value display */
+  grid-column: span 4; /* Span across 4 columns */
+  user-select: none; /* Prevent text selection */
+  overflow: hidden; /* hidden overflow */
+  width: 100%; /* Full width */
+  text-align: end; /* Align text to the end */
+  color: #5166d6; /* Text color */
+  height: 100px; /* Fixed height */
+  line-height: 100px; /* Center text vertically */
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px #fff; /* Inner shadow effect */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 12px; /* Margin below value display */
+  padding: 0 20px; /* Horizontal padding */
+  font-size: 2em; /* Font size */
+  font-weight: 500; /* Font weight */
 }
 
 .dark-mode .calculator .buttons #value {
-  background: #33393e;
-  color: #eee;
+  background: #33393e; /* Dark background for value display in dark mode */
+  color: #eee; /* Light text color for dark mode */
   box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.1),
-    inset -15px -15px 20px rgba(255, 255, 255, 0.1);
+    inset -15px -15px 20px rgba(255, 255, 255, 0.1); /* Inner shadow effect for dark mode */
 }
 
 .calculator .buttons span {
-  position: relative;
-  padding: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
-  margin: 10px;
-  cursor: pointer;
-  user-select: none;
-  min-width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #666;
-  border: 2px solid #edf1f4;
-  border-radius: 10px;
+  position: relative; /* Position relative for button spans */
+  padding: 10px; /* Padding for buttons */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff; /* Shadow effect */
+  margin: 10px; /* Margin around buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  user-select: none; /* Prevent text selection */
+  min-width: 40px; /* Minimum width for buttons */
+  display: flex; /* Use flexbox for button layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 1.2rem; /* Font size for buttons */
+  font-weight: 600; /* Font weight for buttons */
+  color: #666; /* Text color for buttons */
+  border: 2px solid #edf1f4; /* Border for buttons */
+  border-radius: 10px; /* Rounded corners for buttons */
 }
 
-
 .dark-mode .calculator .buttons span {
-  color: #eee;
-  border: 2px solid #333;
+  color: #eee; /* Light text color for buttons in dark mode */
+  border: 2px solid #333; /* Dark border for buttons in dark mode */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25),
-    inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+    inset -5px -5px 10px rgba(255, 255, 255, 0.1); /* Shadow effect for dark mode */
 }
 
 .calculator .buttons span:active {
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
-  color: #f44336;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1); /* Inner shadow effect on active */
+  color: #f44336; /* Change text color on active */
 }
 
 .dark-mode .calculator .buttons span:active {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25),
-    -5px -5px 10px rgba(255, 255, 255, 0.1);
+    -5px -5px 10px rgba(255, 255, 255, 0.1); /* Shadow effect for dark mode on active */
 }
 
 .calculator .buttons span#clear {
-  grid-column: span 2;
-  background: #f44336;
-  color: #fff;
+  grid-column: span 2; /* Span across 2 columns for clear button */
+  background: #f44336; /* Red background for clear button */
+  color: #fff; /* White text color for clear button */
 }
-/* 
-.calculator .buttons #clear:hover{
-    filter:drop-shadow(2px 2px 5px #f44);
-} */
 
 .calculator .buttons span#plus {
-  grid-row: span 2;
-  background: #31a935;
-  color: #fff;
-  border: 2px solid #edf1f4;
+  grid-row: span 2; /* Span across 2 rows for plus button */
+  background: #31a935; /* Green background for plus button */
+  color: #fff; /* White text color for plus button */
+  border: 2px solid #edf1f4; /* Border for plus button */
 }
 
 .calculator .buttons span#equal {
-  grid-row: span 2;
-  background: #2196f3;
-  color: #fff;
-  border: 2px solid #edf1f4;
+  grid-row: span 2; /* Span across 2 rows for equal button */
+  background: #2196f3; /* Blue background for equal button */
+  color: #fff; /* White text color for equal button */
+  border: 2px solid #edf1f4; /* Border for equal button */
 }
 
 .dark-mode .buttons span#clear:active,
 .dark-mode .buttons span#plus:active,
 .dark-mode .buttons span#equal:active {
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1); /* Inner shadow effect on active for dark mode */
 }
 
 .calculator .buttons span#clear:active,
 .calculator .buttons span#plus:active,
 .calculator .buttons span#equal:active {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff,
-    inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+    inset 5px 5px 10px rgba(0, 0, 0, 0.1); /* Shadow effect on active for buttons */
 }
 
 .togglebtn {
-  outline: 2px solid #105e9d;
-  position: fixed;
-  top: 20px;
-  right: 200px;
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-  font-size: smaller;
-  color: #0d4a7c;
-  border-radius: 50%;
-  background: #555;
-  cursor: pointer;
-  border: 2px solid #edf1f4;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+  outline: 2px solid #105e9d; /* Outline for toggle button */
+  position: fixed; /* Fixed position for toggle button */
+  top: 20px; /* Position from top */
+  right: 200px; /* Position from right */
+  width: 20px; /* Width of toggle button */
+  height: 20px; /* Height of toggle button */
+  padding: 5px; /* Padding for toggle button */
+  font-size: smaller; /* Font size for toggle button */
+  color: #0d4a7c; /* Text color for toggle button */
+  border-radius: 50%; /* Circular shape for toggle button */
+  background: #555; /* Background color for toggle button */
+  cursor: pointer; /* Pointer cursor on hover */
+  border: 2px solid #edf1f4; /* Border for toggle button */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff; /* Shadow effect for toggle button */
 }
 
-#mode-toggle{
-  display: none;
+#mode-toggle {
+  display: none; /* Hide mode toggle button */
 }
-
 
 .dark-mode .togglebtn {
-  background: #edf1f4;
-  border: 2px solid #333;
+  background: #edf1f4; /* Light background for toggle button in dark mode */
+  border: 2px solid #333; /* Dark border for toggle button in dark mode */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25),
-    -5px -5px 10px rgba(255, 255, 255, 0.1);
+    -5px -5px 10px rgba(255, 255, 255, 0.1); /* Shadow effect for toggle button in dark mode */
 }
